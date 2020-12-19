@@ -267,7 +267,7 @@ filter:alpha(opacity=40);
   margin-top: -100px;
   margin-left: 20px;
   width: 760px;
-  height: 415px;
+  height: 500px;
 }
 .elementor-headline  svg path {
     stroke: red;
@@ -294,6 +294,6 @@ filter:alpha(opacity=40);
  }
  .social-icono a img{
   width: 45px;
-  height: 56px;
+  height: 45px;
  }
 }

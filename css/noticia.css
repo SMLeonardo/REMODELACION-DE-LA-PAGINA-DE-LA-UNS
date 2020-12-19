@@ -8,7 +8,7 @@
     float:left;
     width:100%;
     overflow:hidden;
-    height:203px;
+    height:400px;
     position:relative;
     margin-top:20px;
     margin-bottom:20px;
@@ -39,7 +39,7 @@
 
 .carrusel>div {
     float: left;
-    height: 203px;
+    height: 400px;
     margin-right: 5px;
     width: 195px;
     text-align:center;
@@ -51,6 +51,7 @@
 
 .product {
     border:#CCCCCC 1px solid;
+  
 }
 
 

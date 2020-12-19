@@ -22,8 +22,8 @@ var current = 0;
 var imagenes = new Array();
 
 $(document).ready(function() {
-    var numImages = 12;
-    if (numImages <= 6) {
+    var numImages = 8;
+    if (numImages <= 4) {
         $('.right-arrow').css('display', 'none');
         $('.left-arrow').css('display', 'none');
     }
@@ -32,7 +32,7 @@ $(document).ready(function() {
         if (current > 0) {
             current = current - 1;
         } else {
-            current = numImages - 6;
+            current = numImages - 4;
         }
         
         $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
@@ -53,7 +53,7 @@ $(document).ready(function() {
     });
 
     $('.right-arrow').on('click', function() {
-        if (numImages > current + 6) {
+        if (numImages > current + 4) {
             current = current+1;
         } else {
             current = 0;
@@ -348,7 +348,7 @@ function linea() {
 
 </div>
   </section>
-<!-- COMIENZA LA SECCION DE NOTICIA EN LA WEB-->
+<!-- ''''''''''''''''''''''''''''''''''''''''''''''COMIENZA LA SECCION DE NOTICIA EN LA WEB'''''''''''''''''''''''''''''''''''''''''''-->
   <section class="noticia" style="background-color: black ">
    
     <div class="verticalLine "> &nbsp;
@@ -368,57 +368,42 @@ function linea() {
                 <a href="#" class="left-arrow"><img src="images/left-arrow.png" /></a>
                 <a href="#" class="right-arrow"><img src="images/right-arrow.png" /></a>
                 <div class="carrusel" style=" border:white 2px solid">
-                    <div class="product" id="product_0" style="background-color:white; border:white 4px solid">
-                        <img src="images/N1.jpg" width="185" height="115" />
-                        <p>RECONOCE A JOVEN POR OCUPAR PRIMER PUESTO EN EXAMEN DE ADMISION</p>
+                    <div class="product" id="product_0" style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
+                        <img src="images/N1.jpg" width="270" height="300" />
+                        <br><br><p>RECONOCE A JOVEN POR OCUPAR PRIMER PUESTO EN EXAMEN DE ADMISION</p>
                     </div>
-                    <div class="product" id="product_1" style="background-color:white; border:white 4px solid">
-                        <img src="images/N2.png" width="185" height="115" />
-                        <p>EGRESADOS Y ESTUDIANTES DE LA UNS ORGANIZAN PRIMER MODELO DE NACIONES</p>
+                    <div class="product" id="product_1" style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
+                        <img src="images/N2.png" width="270" height="300" />
+                        <br><br><p>EGRESADOS Y ESTUDIANTES DE LA UNS ORGANIZAN PRIMER MODELO DE NACIONES</p>
                     </div>
-                    <div class="product" id="product_2" style="background-color:white; border:white 4px solid">
-                        <img src="images/N3.jpeg" width="185" height="115" />
-                        <p>TRABAJADORES DE LA UNS RECIBEN KIT DE BIOSEGURIDAD PARA LABORES DE TRABAJO</p>
+                    <div class="product" id="product_2" style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
+                        <img src="images/N3.jpeg" width="270" height="300" />
+                        <br><br><p>TRABAJADORES DE LA UNS RECIBEN KIT DE BIOSEGURIDAD PARA LABORES DE TRABAJO</p>
                     </div>
-                    <div class="product" id="product_3" style="background-color:white; border:white 4px solid">
-                        <img src="images/N4.jpg" width="185" height="115" />
-                        <p>UNS APOYA CREACION DE LEY PARA CREACION E IMPLEMENTACION DEL PARQUE CIENTIFICO</p>
+                    <div class="product" id="product_3" style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
+                        <img src="images/N4.jpg" width="270" height="300" />
+                        <br><br><p>UNS APOYA CREACION DE LEY PARA CREACION E IMPLEMENTACION DEL PARQUE CIENTIFICO</p>
                     </div>
-                    <div class="product" id="product_4" style="background-color:white; border:white 4px solid">
-                        <img src="images/N5.jpg" width="185" height="115" />
-                        <p>RECONOCE A JOVEN POR OCUPAR PRIMER PUESTO EN EXAMEN DE ADMISION</p>
+                    <div class="product" id="product_4" style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
+                        <img src="images/N5.jpg" width="270" height="300" />
+                        <br><br><p>RECONOCE A JOVEN POR OCUPAR PRIMER PUESTO EN EXAMEN DE ADMISION</p>
                     </div>
-                    <div class="product" id="product_5" style="background-color:white; border:white 4px solid">
-                        <img src="images/N2.png" width="185" height="115" />
+                    <div class="product" id="product_5" style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
+                        <img src="images/N2.png" width="270" height="300" />
                         
-                        <p>TRABAJADORES DE LA UNS RECIBEN KIT DE BIOSEGURIDAD PARA LABORES DE TRABAJO</p>
+                        <br><br><p>TRABAJADORES DE LA UNS RECIBEN KIT DE BIOSEGURIDAD PARA LABORES DE TRABAJO</p>
                        </div>
 
-                       <div class="product" id="product_6" style="background-color:white; border:white 4px solid">
-                        <img src="images/N2.png" width="185" height="115" />
-                        <p>EGRESADOS Y ESTUDIANTES DE LA UNS ORGANIZAN PRIMER MODELO DE NACIONES</p>
+                      
+                   <div class="product" id="product_7" style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
+                        <img src="images/N1.jpg" width="270" height="300" />
+                        <br><br><p>RECONOCE A JOVEN POR OCUPAR PRIMER PUESTO EN EXAMEN DE ADMISION</p>
                     </div>
-                   <div class="product" id="product_7" style="background-color:white; border:white 4px solid">
-                        <img src="images/N1.jpg" width="185" height="115" />
-                        <p>RECONOCE A JOVEN POR OCUPAR PRIMER PUESTO EN EXAMEN DE ADMISION</p>
-                    </div>
-                    <div class="product" id="product_8" style="background-color:white; border:white 4px solid">
-                        <img src="images/N3.jpeg" width="185" height="115" />
-                        <p>TRABAJADORES DE LA UNS RECIBEN KIT DE BIOSEGURIDAD PARA LABORES DE TRABAJO</p>
-                    </div>
-                    <div class="product" id="product_9" style="background-color:white; border:white 4px solid">
-                        <img src="images/N4.jpg" width="185" height="115" />
-                        <p>UNS APOYA CREACION DE LEY PARA CREACION E IMPLEMENTACION DEL PARQUE CIENTIFICO</p>
-                    </div>
-                    <div class="product" id="product_10" style="background-color:white; border:white 4px solid">
-                        <img src="images/N5.jpg" width="185" height="115" />
-                       
-                        <p>RECONOCE A JOVEN POR OCUPAR PRIMER PUESTO EN EXAMEN DE ADMISION</p>
-                    </div>
-                    <div class="product" id="product_11" style="background-color:white; border:white 4px solid">
-                        <img src="images/N2.png" width="185" height="115" />
+                   
+                    <div class="product" id="product_11" style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
+                        <img src="images/N2.png" width="270" height="300" />
                         
-                        <p>EGRESADOS Y ESTUDIANTES DE LA UNS ORGANIZAN PRIMER MODELO DE NACIONES</p>
+                        <br><br><p>EGRESADOS Y ESTUDIANTES DE LA UNS ORGANIZAN PRIMER MODELO DE NACIONES</p>
                        </div>
                 </div>
             </div>
@@ -461,8 +446,8 @@ function linea() {
       </path>
       </svg></div></span>
 </div> 
-      <div style="margin-left:20px; ">
-    <iframe class="video" src="https://www.youtube.com/embed/PHd69pGfeig" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video" style="margin-left:20px; height: 500px;">
+    <iframe  src="https://www.youtube.com/embed/PHd69pGfeig" frameborder="0" style="width: 96%;height: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
      </div>
     <br><br><br>
     </div>
