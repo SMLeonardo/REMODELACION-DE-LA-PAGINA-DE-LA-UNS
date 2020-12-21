@@ -281,14 +281,21 @@ filter:alpha(opacity=40);
  }
  
  .info h2{
-  color: white;
+  color: white;text-align: left;
  }
  .info p{
   margin: 1px 0px;
   margin-left: 5px;
   font-size: 20px;
-  color: white;
+  color: white;text-align: left;
  }
+ @media screen and (max-width: 1920px){
+    .container-fluid h2 p{
+
+  
+ }
+}
+ 
  .social-icono {
   margin-top: 20px;
  }
