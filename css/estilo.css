@@ -89,14 +89,16 @@ h1{
     margin-left: 0px;
     margin-bottom:15px; 
     
-
+width: auto;
+height: 95%;
 }
 .logro:hover{
   border: white 4px solid;
 }
 
 .imagen-presentacion{
-	width: 200px;
+	width: 50%;
+  
 	margin: 6px 6px;
   
 }
