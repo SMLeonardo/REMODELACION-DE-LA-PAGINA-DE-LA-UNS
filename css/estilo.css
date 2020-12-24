@@ -308,7 +308,12 @@ filter:alpha(opacity=40);
   
  }
 }*/
- 
+
+
+ .fin-directorio{
+text-align: left;
+
+}
  .social-icono {
   margin-top: 20px;
  }
@@ -316,4 +321,4 @@ filter:alpha(opacity=40);
   width: 45px;
   height: 45px;
  }
-}
+
