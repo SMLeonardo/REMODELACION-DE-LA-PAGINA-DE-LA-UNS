@@ -1,5 +1,95 @@
+/* EDICION TIPOGRAFICA*/
+.nav-item{
+  font-family: 'Teko', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+}
+.dropdown-menu{
+  font-family: 'Teko', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
 
-.nav-link{
+}
+.step-text{
+	font-size: 25px;
+  font-family: 'Teko', sans-serif;
+  font-weight: 400;
+  text-align:"center";
+  }
+  .step-text{
+    font-size: 25px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    text-align:"center";
+    
+  }
+  .sec_down {
+    font-size: 55px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 500;
+    text-align:"center"; 
+  }
+  .mensaje-uns{
+
+  
+    /*
+    margin-left: 100px;
+    margin-right: auto;*/
+    margin: 0px 5px ;
+    text-align:"center";
+    color: white;
+    font-size: 30px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 200;
+  
+  }
+
+  .footer-copyright{
+
+    font-family: 'Teko', sans-serif;
+  }
+
+  h1#pregunta1{
+    margin: 0px 5px ;
+  text-align:"center";
+	color: white;
+	font-size: 55px;
+  font-family: 'Teko', sans-serif;
+  font-weight: 600;
+  }
+  h1{
+
+    font-family: 'Teko', sans-serif;
+  }
+  .col-md-3{
+    font-size: 40 px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+  }
+  .col-md-6{
+    font-size: 25 px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+   }
+   .logros a{
+    font-size: 28px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 500;
+    
+  }
+  h5{
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-size: 25px;
+  }
+
+  #navbarSupportedContent{
+    font-size: 28px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 500;
+  }
+/* FIN EDICION TIPOGRAFICA*/
+  .nav-link{
 	text-decoration: none;
     background-image: linear-gradient(currentColor, currentColor);
     background-position: 0% 100%;
@@ -16,7 +106,7 @@
 	color: white;
 }
 .sps--blw{
-	background-color: black;
+	background-color: rgb(27, 27, 27);
 	color: white;
 }
 .lista{
@@ -33,7 +123,7 @@ body{
 	font-family: Agency FB;
 }
 .section1{
-	background-color: black;
+	background-color: rgb(56, 56, 56);
 	}
 .verticalLine {
        width:4px;
@@ -66,7 +156,7 @@ h1{
 
 .logros a{
   display:block;
-  background-color:black;
+  background-color: rgb(56, 56, 56);
   border-radius: 20px;
    border: white 2px solid;
   width:200px;
