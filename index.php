@@ -96,7 +96,14 @@ function linea() {
     <title>Universidad Nacional del Santa</title>
   </head>
   <body>
-
+    <?php
+                      include("../contolador/conexion.php");
+                      $solicitud="SELECT * FROM secciones";
+                      $resultado=mysqli_query($conexion,$solicitud);
+                 while ($fila = mysqli_fetch_array($resultado)) {
+                  if ($fila[2]=="1" && $fila[1]=="MENU1") {
+                  
+?>
    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top sps sps--abv">
   <div class="container" >
     <a class="navbar-brand" href="#">
@@ -132,7 +139,10 @@ function linea() {
 
   </div>
 </nav> 
-
+<?php
+}
+}
+?>
 
   
      
@@ -162,7 +172,14 @@ function linea() {
   </a>
 </div>
 <!--segundo menu-->
-
+  <?php
+                      include("../contolador/conexion.php");
+                      $solicitud="SELECT * FROM secciones";
+                      $resultado=mysqli_query($conexion,$solicitud);
+                 while ($fila = mysqli_fetch_array($resultado)) {
+                  if ($fila[2]=="1" && $fila[1]=="MENU2") {
+                  
+?>
 <ul class="nav justify-content-center" style="background-color: rgb(27, 27, 27)">
 
    <li class="nav-item dropdown">
@@ -215,6 +232,10 @@ function linea() {
           </ul> 
       </li>
 </ul>
+<?php
+}
+}
+?>
 <!--aqui comienza diseno de cuerpo de pagina-->
 <main>
   
@@ -318,6 +339,15 @@ function linea() {
 
 </div>
 
+<!--------------------------------------- SECCION SERVICIOS----------------------------------------- -->
+ <?php
+                      include("../contolador/conexion.php");
+                      $solicitud="SELECT * FROM secciones";
+                      $resultado=mysqli_query($conexion,$solicitud);
+                 while ($fila = mysqli_fetch_array($resultado)) {
+                  if ($fila[2]=="1" && $fila[1]=="SERVICIOS") {
+                  
+?>
 <section class="fw-theme-steps">
      
     <br>
@@ -386,7 +416,19 @@ function linea() {
 
 </div>
   </section>
-<!-- ''''''''''''''''''''''''''''''''''''''''''''''COMIENZA LA SECCION DE NOTICIA EN LA WEB'''''''''''''''''''''''''''''''''''''''''''-->
+  <?php
+}
+}
+  ?>
+<!-- ''''''''''''''''''COMIENZA LA SECCION DE NOTICIA EN LA WEB'''''''''''''''''''''''''''''''''''''''-->
+   <?php
+                      include("../contolador/conexion.php");
+                      $solicitud="SELECT * FROM secciones";
+                      $resultado=mysqli_query($conexion,$solicitud);
+                 while ($fila = mysqli_fetch_array($resultado)) {
+                  if ($fila[2]=="1" && $fila[1]=="NOTICIAS") {
+                  
+?>
   <section class="noticia" style="background-color:rgb(56, 56, 56) ">
    
    
@@ -405,43 +447,24 @@ function linea() {
                 <a href="#" class="left-arrow"><img src="images/left-arrow.png" /></a>
                 <a href="#" class="right-arrow"><img src="images/right-arrow.png" /></a>
                 <div class="carrusel" style=" border:white 2px solid">
-                    <div class="product" id="product_0" style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
-                        <img src="images/N1.jpg" width="280" height="300" />
-                        <br><br><p>RECONOCE A JOVEN POR OCUPAR PRIMER PUESTO EN EXAMEN DE ADMISION</p>
+<?php
+                      include("../contolador/conexion.php");
+                      $solicitud="SELECT * FROM noticias";
+                      $resultado=mysqli_query($conexion,$solicitud);
+                 while ($fila = mysqli_fetch_array($resultado)) {
+                  if ($fila[4]=="1") {
+                  
+?>
+                    <div class="product"  style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
+                      <img src="../modelo/verNoticia.php?id=<?php echo $fila[0] ?>" width="280" height="300">
+                       <!-- <img src="images/N1.jpg" width="280" height="300" /> -->
+                        <br><br><p><?php echo $fila[1]?></p>
                     </div>
-                    <div class="product" id="product_1" style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
-                        <img src="images/N2.png" width="280" height="300" />
-                        <br><br><p>EGRESADOS Y ESTUDIANTES DE LA UNS ORGANIZAN PRIMER MODELO DE NACIONES</p>
-                    </div>
-                    <div class="product" id="product_2" style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
-                        <img src="images/N3.jpeg" width="280" height="300" />
-                        <br><br><p>TRABAJADORES DE LA UNS RECIBEN KIT DE BIOSEGURIDAD PARA LABORES DE TRABAJO</p>
-                    </div>
-                    <div class="product" id="product_3" style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
-                        <img src="images/N4.jpg" width="280" height="300" />
-                        <br><br><p>UNS APOYA CREACION DE LEY PARA CREACION E IMPLEMENTACION DEL PARQUE CIENTIFICO</p>
-                    </div>
-                    <div class="product" id="product_4" style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
-                        <img src="images/N5.jpg" width="280" height="300" />
-                        <br><br><p>RECONOCE A JOVEN POR OCUPAR PRIMER PUESTO EN EXAMEN DE ADMISION</p>
-                    </div>
-                    <div class="product" id="product_5" style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
-                        <img src="images/N2.png" width="280" height="300" />
-                        
-                        <br><br><p>TRABAJADORES DE LA UNS RECIBEN KIT DE BIOSEGURIDAD PARA LABORES DE TRABAJO</p>
-                       </div>
-
-                      
-                   <div class="product" id="product_7" style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
-                        <img src="images/N1.jpg" width="280" height="300" />
-                        <br><br><p>RECONOCE A JOVEN POR OCUPAR PRIMER PUESTO EN EXAMEN DE ADMISION</p>
-                    </div>
-                   
-                    <div class="product" id="product_11" style="background-color:white; border:white 4px solid;width: 300px;height: 400px;">
-                        <img src="images/N2.png" width="280" height="300" />
-                        
-                        <br><br><p>EGRESADOS Y ESTUDIANTES DE LA UNS ORGANIZAN PRIMER MODELO DE NACIONES</p>
-                       </div>
+  <?php 
+                        # code...
+                  }  
+                      }
+                      ?>                 
                 </div>
             </div>
         </div>
@@ -461,8 +484,18 @@ function linea() {
         </div><br><br>
          
   </section>
-
-    <!-------------------------------------------------------------------SECCION VIDEO------------------------------------------------->
+<?php
+}}
+?>
+    <!---------------------------------------------SECCION VIDEO------------------------------------->
+ <?php
+                      include("../contolador/conexion.php");
+                      $solicitud="SELECT * FROM secciones";
+                      $resultado=mysqli_query($conexion,$solicitud);
+                 while ($fila = mysqli_fetch_array($resultado)) {
+                  if ($fila[2]=="1" && $fila[1]=="SECCION VIDEO") {
+                  
+?>
   <section  style = " ">
     <div class="banner-video">
     <center></center>
@@ -485,7 +518,18 @@ function linea() {
     <br>
     </div>
   </section>
-  <!------------------------------------------------SECCION VINCULOS DE INTERES-------------------------------------------->
+  <?php
+}}
+  ?>
+  <!-----------------------------------SECCION VINCULOS DE INTERES----------------------------------->
+   <?php
+                      include("../contolador/conexion.php");
+                      $solicitud="SELECT * FROM secciones";
+                      $resultado=mysqli_query($conexion,$solicitud);
+                 while ($fila = mysqli_fetch_array($resultado)) {
+                  if ($fila[2]=="1" && $fila[1]=="VINCULOS") {
+                  
+?>
   <section>
      <div style="margin-bottom: -120px;">
     <h1 class=" titulo" style="color: rgb(15, 15, 15); margin-left: 80px;">VINCULOS DE INTERES</h1>
@@ -554,6 +598,9 @@ function linea() {
   </div>  
   </div>  
   </section>
+  <?php
+}}
+  ?>
 </main>
 
 <!-- Footer -->
