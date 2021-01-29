@@ -145,44 +145,45 @@ function linea() {
 ?>
 
 <!--  sliders edicion-->
+
+
 <?php
                       include("../contolador/conexion.php");
                       $solicitud="SELECT * FROM sliders where estado='1'";
                       $resultado=mysqli_query($conexion,$solicitud);
-                      
-              ?>
+                 ?>       
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"> 
+
+ <div class="carousel-inner">
+
+
+      <div class="carousel-item active" >                                  
               
-     
-
- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  
-
-  <div class="carousel-inner">
-    <div class="carousel-item active" >
-
-
-    <img src=" <?php 
+      <?php  
                 while ($fila = mysqli_fetch_row($resultado)) {
                   $datos=$fila[0]."||".
                   $fila[1]."||".$fila[2]."||".$fila[3]; 
                   $ruta="../".$fila[2];
                   ?> 
-              
-              " class="d-block w-100" alt="...">
+
+        <img src="<?php echo $ruta?>" class="d-block w-100" alt="..."> 
+
+        <?php } ?>
+
 
     </div>
-    <?php
-};
-  ?>
-  <!--  sliders edicion
-    <div class="carousel-item" >
-      <img src="images/banner1.jpg" class="d-block w-100" class="d-block w-100" alt="..." >
-    </div>
-    <div class="carousel-item" >
-      <img src="images/ec8956637a99787bd197eacd77acce5e.jpg" class="d-block w-100" alt="...">
-    </div>
+    
+ 
+        <!-- <div class="carousel-item" >
+            <img src="images/banner1.jpg" class="d-block w-100" class="d-block w-100" alt="..." >
+          </div>
+          <div class="carousel-item" >
+            <img src="images/ec8956637a99787bd197eacd77acce5e.jpg" class="d-block w-100" alt="...">
+          </div>-->
+          
   </div>
--->
+
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -191,6 +192,7 @@ function linea() {
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </a>
+
 </div>
 
 
