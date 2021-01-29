@@ -144,7 +144,14 @@ function linea() {
 }
 ?>
 
-  
+<!--  sliders edicion-->
+<?php
+                      include("../contolador/conexion.php");
+                      $solicitud="SELECT * FROM sliders where estado='1'";
+                      $resultado=mysqli_query($conexion,$solicitud);
+                      
+              ?>
+              
      
 
  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -152,8 +159,22 @@ function linea() {
 
   <div class="carousel-inner">
     <div class="carousel-item active" >
-      <img src="images/6974ce5ac660610b44d9b9fed0ff9548.jpg" class="d-block w-100" alt="...">
+
+
+    <img src=" <?php 
+                while ($fila = mysqli_fetch_row($resultado)) {
+                  $datos=$fila[0]."||".
+                  $fila[1]."||".$fila[2]."||".$fila[3]; 
+                  $ruta="../".$fila[2];
+                  ?> 
+              
+              " class="d-block w-100" alt="...">
+
     </div>
+    <?php
+};
+  ?>
+  <!--  sliders edicion
     <div class="carousel-item" >
       <img src="images/banner1.jpg" class="d-block w-100" class="d-block w-100" alt="..." >
     </div>
@@ -161,7 +182,7 @@ function linea() {
       <img src="images/ec8956637a99787bd197eacd77acce5e.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
-
+-->
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -171,6 +192,11 @@ function linea() {
     <span class="visually-hidden">Next</span>
   </a>
 </div>
+
+
+
+
+
 <!--segundo menu-->
   <?php
                       include("../contolador/conexion.php");
