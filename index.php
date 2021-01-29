@@ -522,74 +522,42 @@ function linea() {
 }}
   ?>
   <!-----------------------------------SECCION VINCULOS DE INTERES----------------------------------->
-   <?php
+  <?php
                       include("../contolador/conexion.php");
-                      $solicitud="SELECT * FROM secciones";
+                      $solicitud="SELECT * FROM vinculos where estado='1'";
                       $resultado=mysqli_query($conexion,$solicitud);
-                 while ($fila = mysqli_fetch_array($resultado)) {
-                  if ($fila[2]=="1" && $fila[1]=="VINCULOS") {
-                  
-?>
+                      
+              ?>
+              
   <section>
      <div style="margin-bottom: -120px;">
     <h1 class=" titulo" style="color: rgb(15, 15, 15); margin-left: 80px;">VINCULOS DE INTERES</h1>
      <div class="mural">
        
     <center><div class="container" >
-    
+       
+                      
+                      
     <div class="row">
         <div id="content" class="col-lg-12">
             <div id="carrusel">
                 <a href="#" class="left-arrow"><img src="images/left-arrow.png" /></a>
                 <a href="#" class="right-arrow"><img src="images/right-arrow.png" /></a>
                 <div class="carrusel" >
+                <?php 
+                while ($fila = mysqli_fetch_row($resultado)) {
+                  $datos=$fila[0]."||".
+                  $fila[1]."||".$fila[2]."||".$fila[3]; 
+                  $ruta="../".$fila[2];
+                  ?>
                     <div class="product" id="product_0" style=" border:#FFFFFF 3px solid; border-radius: 100%;width: 195px; height:200px;">
-                       <img class="oj" style="   border-radius: 100%;margin: 2px 1px;" src="images/V1.png" width="185" height="190" /> 
-                    </div>
-                    <div class="product" id="product_1" style=" border:#FFFFFF 3px solid; border-radius: 100%; width: 195px; height:200px;">
-                        <img style="  border-radius: 100%;margin: 2px 1px;" src="images/V2.png" width="185" height="190" />               
-                    </div>
-                    <div class="product" id="product_2" style=" border:#FFFFFF 3px solid; border-radius: 100%; width: 195px; height:200px;">
-                        <img style="border-radius: 100%;margin: 2px 1px;" src="images/V3.png" width="185" height="190" />
-                        
-                    </div>
-                    <div class="product" id="product_3" style=" border:#FFFFFF 3px solid; border-radius: 100%; width: 195px; height:200px;">
-                        <img style="border-radius: 100%;margin: 2px 1px;" src="images/V4.png" width="185" height="190" />
-                        
-                    </div>
-                    <div class="product" id="product_4" style=" border:#FFFFFF 3px solid; border-radius: 100%; width: 195px; height:200px;">
-                        <img style="border-radius: 100%;margin: 2px 1px;" src="images/V5.png" width="185" height="190" />
-                       
-                    </div>
-                    <div class="product" id="product_5" style=" border:#FFFFFF 3px solid; border-radius: 100%; width: 195px; height:200px;">
-                        <img style="border-radius: 100%;margin: 2px 1px;" src="images/V6.png" width="185" height="190" />
-                        
-                       </div>
+                
+                       <img class="oj" style="   border-radius: 100%;margin: 2px 1px;" src="<?php echo $ruta ?>" width="185" height="190" /> 
 
-                       <div class="product" id="product_6" style=" border:#FFFFFF 3px solid; border-radius: 100%; width: 195px; height:200px;">
-                        <img style="border-radius: 100%;margin: 2px 1px;" src="images/V1.png" width="185" height="190" />
-                        
                     </div>
-                   <div class="product" id="product_7"  style=" border:#FFFFFF 3px solid; border-radius: 100%; width: 195px; height:200px;">
-                        <img style="border-radius: 100%;margin: 2px 1px;" src="images/V2.png" width="185" height="190" />
-                        
-                    </div>
-                    <div class="product" id="product_8" style=" border:#FFFFFF 3px solid; border-radius: 100%; width: 195px; height:200px;">
-                        <img style="border-radius: 100%;margin: 2px 1px;" src="images/V3.png" width="185" height="190" />
-                        
-                    </div>
-                    <div class="product" id="product_9" style=" border:#FFFFFF 3px solid; border-radius: 100%; width: 195px; height:200px;">
-                        <img style="border-radius: 100%;margin: 2px 1px;" src="images/V4.png" width="185" height="190" />
-                        
-                    </div>
-                    <div class="product" id="product_10" style=" border:#FFFFFF 3px solid; border-radius: 100%; width: 195px; height:200px;">
-                        <img style="border-radius: 100%;margin: 2px 1px;" src="images/V5.png" width="185" height="190" />
-                        
-                    </div>
-                    <div class="product" id="product_11" style=" border:#FFFFFF 3px solid; border-radius: 100%; width: 195px; height:200px;">
-                        <img style="border-radius: 100%;margin: 2px 1px;" src="images/V6.png" width="185" height="190" />
-                        
-                       </div>
+                    <?php
+};
+  ?>
                 </div>
             </div>
         </div>
@@ -598,9 +566,7 @@ function linea() {
   </div>  
   </div>  
   </section>
-  <?php
-}}
-  ?>
+ 
 </main>
 
 <!-- Footer -->
